@@ -1,0 +1,53 @@
+digraph Workflow {
+rankdir=TB
+fontname=Courier; fontsize=18; labelloc=t
+label=CS512_Phase_II
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; color=white
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Courier]
+s1_openrefine_processing [shape=record rankdir=LR label="{<f0> s1_openrefine_processing |<f1> OpenRefine Cleaning of physical_description}"];
+s2_analyze_dq_issues [shape=record rankdir=LR label="{<f0> s2_analyze_dq_issues |<f1> Analyze DQ Issues}"];
+s3_process_physical_description_2 [shape=record rankdir=LR label="{<f0> s3_process_physical_description_2 |<f1> Clean physical_descrption Phase 2}"];
+s3_clean_location_data [shape=record rankdir=LR label="{<f0> s3_clean_location_data |<f1> Clean location_data}"];
+s3_standardize_event [shape=record rankdir=LR label="{<f0> s3_standardize_event |<f1> Standardize event Column}"];
+s3_remove_missing_values [shape=record rankdir=LR label="{<f0> s3_remove_missing_values |<f1> Analyze DQ Issues}"];
+s3_merge [shape=record rankdir=LR label="{<f0> s3_merge |<f1> Merge Cleaning Tasks}"];
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+menu_cleaned [shape=record rankdir=LR label="{<f0> menu_cleaned |<f1> file\:menu_cleaned.csv}"];
+menu_csv [shape=record rankdir=LR label="{<f0> menu_csv |<f1> file\:menu.csv}"];
+menu_s1
+dq_issues
+menu_s3_1
+menu_s3_2
+menu_s3_3
+menu_s3_4
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+s1_openrefine_processing -> menu_s1
+menu_csv -> s1_openrefine_processing
+s2_analyze_dq_issues -> dq_issues
+menu_s1 -> s2_analyze_dq_issues
+s3_process_physical_description_2 -> menu_s3_1
+menu_s1 -> s3_process_physical_description_2
+dq_issues -> s3_process_physical_description_2
+s3_clean_location_data -> menu_s3_2
+menu_s1 -> s3_clean_location_data
+dq_issues -> s3_clean_location_data
+s3_standardize_event -> menu_s3_3
+menu_s1 -> s3_standardize_event
+dq_issues -> s3_standardize_event
+s3_remove_missing_values -> menu_s3_4
+menu_s1 -> s3_remove_missing_values
+dq_issues -> s3_remove_missing_values
+s3_merge -> menu_cleaned
+menu_s3_1 -> s3_merge
+menu_s3_2 -> s3_merge
+menu_s3_3 -> s3_merge
+menu_s3_4 -> s3_merge
+}}
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+menu_csv_input_port [label=""]
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+menu_cleaned_output_port [label=""]
+menu_csv_input_port -> menu_csv
+menu_cleaned -> menu_cleaned_output_port
+}
