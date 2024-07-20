@@ -1,0 +1,1861 @@
+#@begin Linear_OR #@desc Linear OpenRefine Workflow
+#@param col-name:isCentimeters
+#@param newColumnName:Material
+#@param expression:grel:"FESTIVAL"
+#@param expression:grel:cells['Colored'].value
+#@param expression:grel:"ANNIVERSARY_LUNCH"
+#@param expression:grel:"ANNUAL_LUNCH"
+#@param col-name:event_cluster
+#@param col-name:Illustrated
+#@param expression:grel:"ANNUAL_BREAKFAST"
+#@param expression:grel:cells['Material'].value
+#@param newColumnName:Dimensions
+#@param expression:grel:"BREAKFAST_&_DINNER"
+#@param expression:""
+#@param expression:grel:"WASHINGTONS_BIRTHDAY"
+#@param expression:grel:"TOUR_LUNCH"
+#@param col-name:Overflow
+#@param expression:grel:'BROADSIDE'
+#@param expression:grel:"SUNDAY_DINNER"
+#@param newColumnName:Area
+#@param expression:grel:"WEDDING"
+#@param expression:value.toNumber()
+#@param expression:grel:"REGULAR_DINNER"
+#@param expression:grel:'PLACEMAT'
+#@param newColumnName:isCentimeters
+#@param expression:grel:value.replace('[',_'').replace(']',_'')
+#@param expression:value.replace("\\"","")
+#@param expression:grel:"EASTER"
+#@param expression:value.replace(".0","")
+#@param expression:grel:"SPECIALS"
+#@param expression:grel:"ANNIVERSARY_DINNER"
+#@param newColumnName:Colored
+#@param expression:value.replace(",",".")
+#@param newColumnName:Illustrated
+#@param expression:"value"
+#@param expression:grel:"FALL_FIELD_DAY"
+#@param expression:grel:ILLUS
+#@param col-name:Dimensions
+#@param expression:grel:'EMBLEM'
+#@param expression:value.replace("_X_","x")
+#@param expression:value.replace(/_x_/i,"x")
+#@param expression:grel:value.replace('__',_'_')
+#@param expression:grel:'COL'
+#@param oldColumnName:Dimensions_1
+#@param separator:";"
+#@param expression:grel:cells['physical_description'].value
+#@param expression:grel:value.replace('\\\\',_'')
+#@param col-name:event
+#@param expression:grel:"ANNUAL_BANQUET"
+#@param expression:value.replace("fold.","")
+#@param expression:grel:value.replace('?',_'')
+#@param expression:grel:value.replace('"',_'')
+#@param expression:value.replace("_x_","x")
+#@param expression:value.replace(/;_(\\s|\\d|\\w|_|\\.)*open/,"")
+#@param expression:value.toUppercase()
+#@param expression:grel:value_/_2.54_/_2.54
+#@param expression:grel:"BALL"
+#@param separator:"x"
+#@param expression:grel:"HONORARY_DINNER"
+#@param expression:grel:"US_GRANTS_BIRTHDAY"
+#@param expression:grel:"TEA"
+#@param col-name:physical_description
+#@param expression:grel:"NEW_YEARS"
+#@param newColumnName:Length
+#@param expression:grel:'PAPER'
+#@param col-name:Length
+#@param expression:grel:"HONORARY_BREAKFAST"
+#@param col-name:Area
+#@param expression:grel:'COLOR'
+#@param expression:grel:"ANNIVERSARY"
+#@param expression:grel:"MEETING"
+#@param oldColumnName:physical_description_5
+#@param oldColumnName:physical_description_4
+#@param expression:grel:COL
+#@param expression:grel:"CHRISTMAS"
+#@param expression:grel:'FOLDER'
+#@param removeOriginalColumn:False
+#@param col-name:location
+#@param newColumnName:event_cluster
+#@param expression:grel:"ANNUAL_MEETING"
+#@param expression:value.replace("_","")
+#@param expression:value.replace("X","x")
+#@param expression:value.replace("cm","")
+#@param expression:grel:"ANNUAL_DINNER"
+#@param expression:value.toString()
+#@param expression:grel:value.toString("%2.3f")
+#@param expression:grel:"WEDDING_ANNIVERSARY"
+#@param col-name:Dimensions_3
+#@param expression:grel:"LINCOLNS_BIRTHDAY"
+#@param expression:grel:"TOUR_BREAKFAST"
+#@param expression:value.replace("_1/2",".5")
+#@param col-name:Material
+#@param col-name:physical_description_6
+#@param expression:value.replace(/;(\\s|\\d|\\w|_|\\.)*open/,"")
+#@param expression:grel:"REUNION"
+#@param expression:value.replace("folded","")
+#@param expression:grel:cells['Illustrated'].value
+#@param expression:value.replace("_folded","")
+#@param oldColumnName:physical_description_3
+#@param expression:grel:"HONORARY_LUNCH"
+#@param expression:grel:'CARDS'
+#@param expression:value.replace("True","1")
+#@param expression:value.replace(/in\\./i,"")
+#@param col-name:Colored
+#@param expression:value.replace("cmed","cm")
+#@param newColumnName:Overflow
+#@param expression:grel:'CARD'
+#@param expression:grel:"ANNUAL_REGATTA"
+#@param expression:grel:cell[Colored].value
+#@param expression:grel:"WINE_LIST"
+#@param expression:value.trim()
+#@param expression:value.replace(/;_(\\s|\\d|\\w|_)*open/,"")
+#@param expression:grel:'ILLUS'
+#@param newColumnName:Width
+#@param expression:grel:"TABLE_DHOTE_DINNER"
+#@param expression:value.replace(/[\\p{Zs}\\s]+/,'_')
+#@param expression:grel:"LUNCH_ON_BOARD"
+#@param col-name:Width
+#@param col-name:physical_description_7
+#@param col-name:event_transform
+#@param oldColumnName:physical_description_1
+#@param oldColumnName:Dimensions_2
+#@param expression:grel:'BOOKLET'
+#@param expression:grel:"BANQUET/RECEPTION"
+#@param expression:grel:"BREAKFAST"
+#@param expression:grel:'28x21.5'
+#@param expression:grel:"TOUR_DINNER"
+#@param expression:grel:"LUNCH"
+#@param expression:grel:"HONORARY_BANQUET"
+#@param expression:value.replace(/inches/i,"")
+#@param oldColumnName:physical_description_2
+#@param expression:value.replace(/folded/i,"")
+#@param expression:grel:"DAILY_MENU"
+#@param expression:grel:"FOURTH_OF_JULY"
+#@param newColumnName:event_transform
+#@param expression:grel:"DINNER"
+#@param expression:grel:"DRINKS"
+#@param expression:grel:"TABLE_DHOTE"
+#@param expression:grel:"CHAPTER_DINNER"
+#@param expression:grel:'30.5x22.5'
+#@in table0
+#@out table307
+#@begin core/column-split0#@desc Split column physical_description by separator
+#@param col-name:physical_description
+#@param separator:";"
+#@param removeOriginalColumn:False
+#@in table0
+#@out table1
+#@end core/column-split0
+#@begin core/column-rename0#@desc Rename column physical_description 1 to Material
+#@param oldColumnName:physical_description_1
+#@param newColumnName:Material
+#@in table1
+#@out table2
+#@end core/column-rename0
+#@begin core/column-rename1#@desc Rename column physical_description 2 to Illustrated
+#@param oldColumnName:physical_description_2
+#@param newColumnName:Illustrated
+#@in table2
+#@out table3
+#@end core/column-rename1
+#@begin core/column-rename2#@desc Rename column physical_description 3 to Colored
+#@param oldColumnName:physical_description_3
+#@param newColumnName:Colored
+#@in table3
+#@out table4
+#@end core/column-rename2
+#@begin core/column-rename3#@desc Rename column physical_description 4 to Dimensions
+#@param oldColumnName:physical_description_4
+#@param newColumnName:Dimensions
+#@in table4
+#@out table5
+#@end core/column-rename3
+#@begin core/column-rename4#@desc Rename column physical_description 5 to Overflow
+#@param oldColumnName:physical_description_5
+#@param newColumnName:Overflow
+#@in table5
+#@out table6
+#@end core/column-rename4
+#@begin core/mass-edit0#@desc Mass edit cells in column Dimensions
+#@param col-name:Dimensions
+#@in table6
+#@out table7
+#@end core/mass-edit0
+#@begin core/mass-edit1#@desc Mass edit cells in column Dimensions
+#@param col-name:Dimensions
+#@in table7
+#@out table8
+#@end core/mass-edit1
+#@begin core/text-transform0#@desc Text transform on cells in column Material using expression value.trim()
+#@param col-name:Material
+#@param expression:value.trim()
+#@in table8
+#@out table9
+#@end core/text-transform0
+#@begin core/text-transform1#@desc Text transform on cells in column Material using expression value.replace(/[\\p{Zs}\\s]+/,' ')
+#@param col-name:Material
+#@param expression:value.replace(/[\\p{Zs}\\s]+/,'_')
+#@in table9
+#@out table10
+#@end core/text-transform1
+#@begin core/text-transform2#@desc Text transform on cells in column Illustrated using expression value.trim()
+#@param col-name:Illustrated
+#@param expression:value.trim()
+#@in table10
+#@out table11
+#@end core/text-transform2
+#@begin core/text-transform3#@desc Text transform on cells in column Illustrated using expression value.replace(/[\\p{Zs}\\s]+/,' ')
+#@param col-name:Illustrated
+#@param expression:value.replace(/[\\p{Zs}\\s]+/,'_')
+#@in table11
+#@out table12
+#@end core/text-transform3
+#@begin core/text-transform4#@desc Text transform on cells in column Dimensions using expression value.trim()
+#@param col-name:Dimensions
+#@param expression:value.trim()
+#@in table12
+#@out table13
+#@end core/text-transform4
+#@begin core/text-transform5#@desc Text transform on cells in column Dimensions using expression value.replace(/[\\p{Zs}\\s]+/,' ')
+#@param col-name:Dimensions
+#@param expression:value.replace(/[\\p{Zs}\\s]+/,'_')
+#@in table13
+#@out table14
+#@end core/text-transform5
+#@begin core/text-transform6#@desc Text transform on cells in column Overflow using expression value.trim()
+#@param col-name:Overflow
+#@param expression:value.trim()
+#@in table14
+#@out table15
+#@end core/text-transform6
+#@begin core/text-transform7#@desc Text transform on cells in column Overflow using expression value.replace(/[\\p{Zs}\\s]+/,' ')
+#@param col-name:Overflow
+#@param expression:value.replace(/[\\p{Zs}\\s]+/,'_')
+#@in table15
+#@out table16
+#@end core/text-transform7
+#@begin core/mass-edit2#@desc Mass edit cells in column Dimensions
+#@param col-name:Dimensions
+#@in table16
+#@out table17
+#@end core/mass-edit2
+#@begin core/text-transform8#@desc Text transform on cells in column Colored using expression value.toString()
+#@param col-name:Colored
+#@param expression:value.toString()
+#@in table17
+#@out table18
+#@end core/text-transform8
+#@begin core/text-transform9#@desc Text transform on cells in column Colored using expression value.toString()
+#@param col-name:Colored
+#@param expression:value.toString()
+#@in table18
+#@out table19
+#@end core/text-transform9
+#@begin core/mass-edit3#@desc Mass edit cells in column Material
+#@param col-name:Material
+#@in table19
+#@out table20
+#@end core/mass-edit3
+#@begin core/mass-edit4#@desc Mass edit cells in column Material
+#@param col-name:Material
+#@in table20
+#@out table21
+#@end core/mass-edit4
+#@begin core/text-transform10#@desc Text transform on cells in column Dimensions using expression grel:cell[Colored].value
+#@param col-name:Dimensions
+#@param expression:grel:cell[Colored].value
+#@in table21
+#@out table22
+#@end core/text-transform10
+#@begin core/text-transform11#@desc Text transform on cells in column Dimensions using expression grel:cells['Colored'].value
+#@param col-name:Dimensions
+#@param expression:grel:cells['Colored'].value
+#@in table22
+#@out table23
+#@end core/text-transform11
+#@begin core/text-transform12#@desc Text transform on cells in column Colored using expression \"\"
+#@param col-name:Colored
+#@param expression:""
+#@in table23
+#@out table24
+#@end core/text-transform12
+#@begin core/column-removal0#@desc Remove column physical_description 7
+#@param col-name:physical_description_7
+#@in table24
+#@out table25
+#@end core/column-removal0
+#@begin core/column-removal1#@desc Remove column physical_description 6
+#@param col-name:physical_description_6
+#@in table25
+#@out table26
+#@end core/column-removal1
+#@begin core/text-transform13#@desc Text transform on cells in column Dimensions using expression grel:cells['Illustrated'].value
+#@param col-name:Dimensions
+#@param expression:grel:cells['Illustrated'].value
+#@in table26
+#@out table27
+#@end core/text-transform13
+#@begin core/text-transform14#@desc Text transform on cells in column Illustrated using expression \"\"
+#@param col-name:Illustrated
+#@param expression:""
+#@in table27
+#@out table28
+#@end core/text-transform14
+#@begin core/text-transform15#@desc Text transform on cells in column Colored using expression grel:COL
+#@param col-name:Colored
+#@param expression:grel:COL
+#@in table28
+#@out table29
+#@end core/text-transform15
+#@begin core/text-transform16#@desc Text transform on cells in column Illustrated using expression grel:ILLUS
+#@param col-name:Illustrated
+#@param expression:grel:ILLUS
+#@in table29
+#@out table30
+#@end core/text-transform16
+#@begin core/text-transform17#@desc Text transform on cells in column Illustrated using expression grel:ILLUS
+#@param col-name:Illustrated
+#@param expression:grel:ILLUS
+#@in table30
+#@out table31
+#@end core/text-transform17
+#@begin core/text-transform18#@desc Text transform on cells in column Illustrated using expression grel:ILLUS
+#@param col-name:Illustrated
+#@param expression:grel:ILLUS
+#@in table31
+#@out table32
+#@end core/text-transform18
+#@begin core/text-transform19#@desc Text transform on cells in column Illustrated using expression grel:'ILLUS'
+#@param col-name:Illustrated
+#@param expression:grel:'ILLUS'
+#@in table32
+#@out table33
+#@end core/text-transform19
+#@begin core/text-transform20#@desc Text transform on cells in column Colored using expression \"\"
+#@param col-name:Colored
+#@param expression:""
+#@in table33
+#@out table34
+#@end core/text-transform20
+#@begin core/text-transform21#@desc Text transform on cells in column Colored using expression grel:'COL'
+#@param col-name:Colored
+#@param expression:grel:'COL'
+#@in table34
+#@out table35
+#@end core/text-transform21
+#@begin core/text-transform22#@desc Text transform on cells in column Dimensions using expression \"\"
+#@param col-name:Dimensions
+#@param expression:""
+#@in table35
+#@out table36
+#@end core/text-transform22
+#@begin core/text-transform23#@desc Text transform on cells in column Illustrated using expression grel:'ILLUS'
+#@param col-name:Illustrated
+#@param expression:grel:'ILLUS'
+#@in table36
+#@out table37
+#@end core/text-transform23
+#@begin core/text-transform24#@desc Text transform on cells in column Material using expression grel:'BOOKLET'
+#@param col-name:Material
+#@param expression:grel:'BOOKLET'
+#@in table37
+#@out table38
+#@end core/text-transform24
+#@begin core/text-transform25#@desc Text transform on cells in column Material using expression grel:'CARD'
+#@param col-name:Material
+#@param expression:grel:'CARD'
+#@in table38
+#@out table39
+#@end core/text-transform25
+#@begin core/text-transform26#@desc Text transform on cells in column Material using expression grel:'FOLDER'
+#@param col-name:Material
+#@param expression:grel:'FOLDER'
+#@in table39
+#@out table40
+#@end core/text-transform26
+#@begin core/mass-edit5#@desc Mass edit cells in column Overflow
+#@param col-name:Overflow
+#@in table40
+#@out table41
+#@end core/mass-edit5
+#@begin core/mass-edit6#@desc Mass edit cells in column Overflow
+#@param col-name:Overflow
+#@in table41
+#@out table42
+#@end core/mass-edit6
+#@begin core/mass-edit7#@desc Mass edit cells in column Illustrated
+#@param col-name:Illustrated
+#@in table42
+#@out table43
+#@end core/mass-edit7
+#@begin core/mass-edit8#@desc Mass edit cells in column Illustrated
+#@param col-name:Illustrated
+#@in table43
+#@out table44
+#@end core/mass-edit8
+#@begin core/mass-edit9#@desc Mass edit cells in column Illustrated
+#@param col-name:Illustrated
+#@in table44
+#@out table45
+#@end core/mass-edit9
+#@begin core/mass-edit10#@desc Mass edit cells in column Illustrated
+#@param col-name:Illustrated
+#@in table45
+#@out table46
+#@end core/mass-edit10
+#@begin core/mass-edit11#@desc Mass edit cells in column Illustrated
+#@param col-name:Illustrated
+#@in table46
+#@out table47
+#@end core/mass-edit11
+#@begin core/mass-edit12#@desc Mass edit cells in column Illustrated
+#@param col-name:Illustrated
+#@in table47
+#@out table48
+#@end core/mass-edit12
+#@begin core/text-transform27#@desc Text transform on cells in column Colored using expression grel:'COL'
+#@param col-name:Colored
+#@param expression:grel:'COL'
+#@in table48
+#@out table49
+#@end core/text-transform27
+#@begin core/text-transform28#@desc Text transform on cells in column Illustrated using expression grel:'ILLUS'
+#@param col-name:Illustrated
+#@param expression:grel:'ILLUS'
+#@in table49
+#@out table50
+#@end core/text-transform28
+#@begin core/text-transform29#@desc Text transform on cells in column Illustrated using expression grel:'ILLUS'
+#@param col-name:Illustrated
+#@param expression:grel:'ILLUS'
+#@in table50
+#@out table51
+#@end core/text-transform29
+#@begin core/text-transform30#@desc Text transform on cells in column Illustrated using expression grel:'ILLUS'
+#@param col-name:Illustrated
+#@param expression:grel:'ILLUS'
+#@in table51
+#@out table52
+#@end core/text-transform30
+#@begin core/text-transform31#@desc Text transform on cells in column Overflow using expression grel:'EMBLEM'
+#@param col-name:Overflow
+#@param expression:grel:'EMBLEM'
+#@in table52
+#@out table53
+#@end core/text-transform31
+#@begin core/text-transform32#@desc Text transform on cells in column Illustrated using expression \"\"
+#@param col-name:Illustrated
+#@param expression:""
+#@in table53
+#@out table54
+#@end core/text-transform32
+#@begin core/text-transform33#@desc Text transform on cells in column Overflow using expression grel:cells['Illustrated'].value
+#@param col-name:Overflow
+#@param expression:grel:cells['Illustrated'].value
+#@in table54
+#@out table55
+#@end core/text-transform33
+#@begin core/text-transform34#@desc Text transform on cells in column Illustrated using expression \"\"
+#@param col-name:Illustrated
+#@param expression:""
+#@in table55
+#@out table56
+#@end core/text-transform34
+#@begin core/mass-edit13#@desc Mass edit cells in column Colored
+#@param col-name:Colored
+#@in table56
+#@out table57
+#@end core/mass-edit13
+#@begin core/mass-edit14#@desc Mass edit cells in column Colored
+#@param col-name:Colored
+#@in table57
+#@out table58
+#@end core/mass-edit14
+#@begin core/mass-edit15#@desc Mass edit cells in column Colored
+#@param col-name:Colored
+#@in table58
+#@out table59
+#@end core/mass-edit15
+#@begin core/text-transform35#@desc Text transform on cells in column Colored using expression grel:'COL'
+#@param col-name:Colored
+#@param expression:grel:'COL'
+#@in table59
+#@out table60
+#@end core/text-transform35
+#@begin core/text-transform36#@desc Text transform on cells in column Colored using expression grel:'COL'
+#@param col-name:Colored
+#@param expression:grel:'COL'
+#@in table60
+#@out table61
+#@end core/text-transform36
+#@begin core/text-transform37#@desc Text transform on cells in column Colored using expression value.trim()
+#@param col-name:Colored
+#@param expression:value.trim()
+#@in table61
+#@out table62
+#@end core/text-transform37
+#@begin core/text-transform38#@desc Text transform on cells in column Overflow using expression grel:cells['Colored'].value
+#@param col-name:Overflow
+#@param expression:grel:cells['Colored'].value
+#@in table62
+#@out table63
+#@end core/text-transform38
+#@begin core/text-transform39#@desc Text transform on cells in column Colored using expression \"\"
+#@param col-name:Colored
+#@param expression:""
+#@in table63
+#@out table64
+#@end core/text-transform39
+#@begin core/text-transform40#@desc Text transform on cells in column Overflow using expression grel:cells['Colored'].value
+#@param col-name:Overflow
+#@param expression:grel:cells['Colored'].value
+#@in table64
+#@out table65
+#@end core/text-transform40
+#@begin core/text-transform41#@desc Text transform on cells in column Colored using expression \"\"
+#@param col-name:Colored
+#@param expression:""
+#@in table65
+#@out table66
+#@end core/text-transform41
+#@begin core/text-transform42#@desc Text transform on cells in column Material using expression value.toString()
+#@param col-name:Material
+#@param expression:value.toString()
+#@in table66
+#@out table67
+#@end core/text-transform42
+#@begin core/text-transform43#@desc Text transform on cells in column Material using expression \"\"
+#@param col-name:Material
+#@param expression:""
+#@in table67
+#@out table68
+#@end core/text-transform43
+#@begin core/mass-edit16#@desc Mass edit cells in column Dimensions
+#@param col-name:Dimensions
+#@in table68
+#@out table69
+#@end core/mass-edit16
+#@begin core/text-transform44#@desc Text transform on cells in column Dimensions using expression grel:cells['Material'].value
+#@param col-name:Dimensions
+#@param expression:grel:cells['Material'].value
+#@in table69
+#@out table70
+#@end core/text-transform44
+#@begin core/text-transform45#@desc Text transform on cells in column Material using expression \"\"
+#@param col-name:Material
+#@param expression:""
+#@in table70
+#@out table71
+#@end core/text-transform45
+#@begin core/mass-edit17#@desc Mass edit cells in column Material
+#@param col-name:Material
+#@in table71
+#@out table72
+#@end core/mass-edit17
+#@begin core/mass-edit18#@desc Mass edit cells in column Material
+#@param col-name:Material
+#@in table72
+#@out table73
+#@end core/mass-edit18
+#@begin core/text-transform46#@desc Text transform on cells in column Material using expression grel:'BOOKLET'
+#@param col-name:Material
+#@param expression:grel:'BOOKLET'
+#@in table73
+#@out table74
+#@end core/text-transform46
+#@begin core/text-transform47#@desc Text transform on cells in column Material using expression grel:'BROADSIDE'
+#@param col-name:Material
+#@param expression:grel:'BROADSIDE'
+#@in table74
+#@out table75
+#@end core/text-transform47
+#@begin core/text-transform48#@desc Text transform on cells in column Material using expression grel:'FOLDER'
+#@param col-name:Material
+#@param expression:grel:'FOLDER'
+#@in table75
+#@out table76
+#@end core/text-transform48
+#@begin core/text-transform49#@desc Text transform on cells in column Material using expression grel:'FOLDER'
+#@param col-name:Material
+#@param expression:grel:'FOLDER'
+#@in table76
+#@out table77
+#@end core/text-transform49
+#@begin core/text-transform50#@desc Text transform on cells in column Material using expression grel:'CARDS'
+#@param col-name:Material
+#@param expression:grel:'CARDS'
+#@in table77
+#@out table78
+#@end core/text-transform50
+#@begin core/text-transform51#@desc Text transform on cells in column Material using expression grel:'CARD'
+#@param col-name:Material
+#@param expression:grel:'CARD'
+#@in table78
+#@out table79
+#@end core/text-transform51
+#@begin core/text-transform52#@desc Text transform on cells in column Material using expression \"\"
+#@param col-name:Material
+#@param expression:""
+#@in table79
+#@out table80
+#@end core/text-transform52
+#@begin core/text-transform53#@desc Text transform on cells in column Material using expression grel:'PAPER'
+#@param col-name:Material
+#@param expression:grel:'PAPER'
+#@in table80
+#@out table81
+#@end core/text-transform53
+#@begin core/text-transform54#@desc Text transform on cells in column Material using expression grel:'PLACEMAT'
+#@param col-name:Material
+#@param expression:grel:'PLACEMAT'
+#@in table81
+#@out table82
+#@end core/text-transform54
+#@begin core/text-transform55#@desc Text transform on cells in column Colored using expression grel:'COLOR'
+#@param col-name:Colored
+#@param expression:grel:'COLOR'
+#@in table82
+#@out table83
+#@end core/text-transform55
+#@begin core/text-transform56#@desc Text transform on cells in column Dimensions using expression value.trim()
+#@param col-name:Dimensions
+#@param expression:value.trim()
+#@in table83
+#@out table84
+#@end core/text-transform56
+#@begin core/text-transform57#@desc Text transform on cells in column Dimensions using expression value.replace(/[\\p{Zs}\\s]+/,' ')
+#@param col-name:Dimensions
+#@param expression:value.replace(/[\\p{Zs}\\s]+/,'_')
+#@in table84
+#@out table85
+#@end core/text-transform57
+#@begin core/text-transform58#@desc Text transform on cells in column Dimensions using expression value.replace(/ x /i,\"x\")
+#@param col-name:Dimensions
+#@param expression:value.replace(/_x_/i,"x")
+#@in table85
+#@out table86
+#@end core/text-transform58
+#@begin core/text-transform59#@desc Text transform on cells in column Dimensions using expression value.replace(\" X \",\"x\")
+#@param col-name:Dimensions
+#@param expression:value.replace("_X_","x")
+#@in table86
+#@out table87
+#@end core/text-transform59
+#@begin core/text-transform60#@desc Text transform on cells in column Dimensions using expression value.replace(/folded/i,\"\")
+#@param col-name:Dimensions
+#@param expression:value.replace(/folded/i,"")
+#@in table87
+#@out table88
+#@end core/text-transform60
+#@begin core/text-transform61#@desc Text transform on cells in column Dimensions using expression value.replace(/inches/i,\"\")
+#@param col-name:Dimensions
+#@param expression:value.replace(/inches/i,"")
+#@in table88
+#@out table89
+#@end core/text-transform61
+#@begin core/text-transform62#@desc Text transform on cells in column Dimensions using expression value.replace(/in\\./i,\"\")
+#@param col-name:Dimensions
+#@param expression:value.replace(/in\\./i,"")
+#@in table89
+#@out table90
+#@end core/text-transform62
+#@begin core/text-transform63#@desc Text transform on cells in column Dimensions using expression value.trim()
+#@param col-name:Dimensions
+#@param expression:value.trim()
+#@in table90
+#@out table91
+#@end core/text-transform63
+#@begin core/text-transform64#@desc Text transform on cells in column Dimensions using expression value.replace(\" X \",\"x\")
+#@param col-name:Dimensions
+#@param expression:value.replace("_X_","x")
+#@in table91
+#@out table92
+#@end core/text-transform64
+#@begin core/text-transform65#@desc Text transform on cells in column Dimensions using expression value.replace(\" x \",\"x\")
+#@param col-name:Dimensions
+#@param expression:value.replace("_x_","x")
+#@in table92
+#@out table93
+#@end core/text-transform65
+#@begin core/text-transform66#@desc Text transform on cells in column Dimensions using expression value.replace(\"X\",\"x\")
+#@param col-name:Dimensions
+#@param expression:value.replace("X","x")
+#@in table93
+#@out table94
+#@end core/text-transform66
+#@begin core/text-transform67#@desc Text transform on cells in column Dimensions using expression value.replace(\"fold.\",\"\")
+#@param col-name:Dimensions
+#@param expression:value.replace("fold.","")
+#@in table94
+#@out table95
+#@end core/text-transform67
+#@begin core/text-transform68#@desc Text transform on cells in column Dimensions using expression value.replace(\"\\\"\",\"\")
+#@param col-name:Dimensions
+#@param expression:value.replace("\\"","")
+#@in table95
+#@out table96
+#@end core/text-transform68
+#@begin core/text-transform69#@desc Text transform on cells in column Dimensions using expression grel:cells['physical_description'].value
+#@param col-name:Dimensions
+#@param expression:grel:cells['physical_description'].value
+#@in table96
+#@out table97
+#@end core/text-transform69
+#@begin core/text-transform70#@desc Text transform on cells in column Dimensions using expression value.replace(/; (\\s|\\d|\\w| )*open/,\"\")
+#@param col-name:Dimensions
+#@param expression:value.replace(/;_(\\s|\\d|\\w|_)*open/,"")
+#@in table97
+#@out table98
+#@end core/text-transform70
+#@begin core/text-transform71#@desc Text transform on cells in column Dimensions using expression value.replace(/; (\\s|\\d|\\w| |\\.)*open/,\"\")
+#@param col-name:Dimensions
+#@param expression:value.replace(/;_(\\s|\\d|\\w|_|\\.)*open/,"")
+#@in table98
+#@out table99
+#@end core/text-transform71
+#@begin core/text-transform72#@desc Text transform on cells in column Dimensions using expression value.replace(/;(\\s|\\d|\\w| |\\.)*open/,\"\")
+#@param col-name:Dimensions
+#@param expression:value.replace(/;(\\s|\\d|\\w|_|\\.)*open/,"")
+#@in table99
+#@out table100
+#@end core/text-transform72
+#@begin core/text-transform73#@desc Text transform on cells in column Dimensions using expression value.trim()
+#@param col-name:Dimensions
+#@param expression:value.trim()
+#@in table100
+#@out table101
+#@end core/text-transform73
+#@begin core/text-transform74#@desc Text transform on cells in column Dimensions using expression value.replace(\" folded\",\"\")
+#@param col-name:Dimensions
+#@param expression:value.replace("_folded","")
+#@in table101
+#@out table102
+#@end core/text-transform74
+#@begin core/text-transform75#@desc Text transform on cells in column Dimensions using expression value.replace(\"folded\",\"\")
+#@param col-name:Dimensions
+#@param expression:value.replace("folded","")
+#@in table102
+#@out table103
+#@end core/text-transform75
+#@begin core/text-transform76#@desc Text transform on cells in column Dimensions using expression grel:'28x21.5'
+#@param col-name:Dimensions
+#@param expression:grel:'28x21.5'
+#@in table103
+#@out table104
+#@end core/text-transform76
+#@begin core/text-transform77#@desc Text transform on cells in column Dimensions using expression grel:'30.5x22.5'
+#@param col-name:Dimensions
+#@param expression:grel:'30.5x22.5'
+#@in table104
+#@out table105
+#@end core/text-transform77
+#@begin core/text-transform78#@desc Text transform on cells in column Dimensions using expression \"\"
+#@param col-name:Dimensions
+#@param expression:""
+#@in table105
+#@out table106
+#@end core/text-transform78
+#@begin core/text-transform79#@desc Text transform on cells in column Dimensions using expression value.replace(\",\",\".\")
+#@param col-name:Dimensions
+#@param expression:value.replace(",",".")
+#@in table106
+#@out table107
+#@end core/text-transform79
+#@begin core/text-transform80#@desc Text transform on cells in column Dimensions using expression value.replace(\" 1/2\",\".5\")
+#@param col-name:Dimensions
+#@param expression:value.replace("_1/2",".5")
+#@in table107
+#@out table108
+#@end core/text-transform80
+#@begin core/text-transform81#@desc Text transform on cells in column Dimensions using expression value.trim()
+#@param col-name:Dimensions
+#@param expression:value.trim()
+#@in table108
+#@out table109
+#@end core/text-transform81
+#@begin core/text-transform82#@desc Text transform on cells in column Dimensions using expression value.replace(\"cmed\",\"cm\")
+#@param col-name:Dimensions
+#@param expression:value.replace("cmed","cm")
+#@in table109
+#@out table110
+#@end core/text-transform82
+#@begin core/text-transform83#@desc Text transform on cells in column Dimensions using expression value.replace(\".0\",\"\")
+#@param col-name:Dimensions
+#@param expression:value.replace(".0","")
+#@in table110
+#@out table111
+#@end core/text-transform83
+#@begin core/mass-edit19#@desc Mass edit cells in column Dimensions
+#@param col-name:Dimensions
+#@in table111
+#@out table112
+#@end core/mass-edit19
+#@begin core/text-transform84#@desc Text transform on cells in column Dimensions using expression value.trim()
+#@param col-name:Dimensions
+#@param expression:value.trim()
+#@in table112
+#@out table113
+#@end core/text-transform84
+#@begin core/text-transform85#@desc Text transform on cells in column Dimensions using expression value.replace(\" \",\"\")
+#@param col-name:Dimensions
+#@param expression:value.replace("_","")
+#@in table113
+#@out table114
+#@end core/text-transform85
+#@begin core/text-transform86#@desc Text transform on cells in column Dimensions using expression value.replace(\"X\",\"x\")
+#@param col-name:Dimensions
+#@param expression:value.replace("X","x")
+#@in table114
+#@out table115
+#@end core/text-transform86
+#@begin core/mass-edit20#@desc Mass edit cells in column Dimensions
+#@param col-name:Dimensions
+#@in table115
+#@out table116
+#@end core/mass-edit20
+#@begin core/mass-edit21#@desc Mass edit cells in column Dimensions
+#@param col-name:Dimensions
+#@in table116
+#@out table117
+#@end core/mass-edit21
+#@begin core/column-addition0#@desc Create column isCentimeters at index 11 based on column Dimensions using expression grel:'True'
+#@param col-name:Dimensions
+#@param newColumnName:"isCentimeters"
+#@in table117
+#@out table118
+#@end core/column-addition0
+#@begin core/text-transform87#@desc Text transform on cells in column Dimensions using expression value.replace(\"cm\",\"\")
+#@param col-name:Dimensions
+#@param expression:value.replace("cm","")
+#@in table118
+#@out table119
+#@end core/text-transform87
+#@begin core/text-transform88#@desc Text transform on cells in column Dimensions using expression value.trim()
+#@param col-name:Dimensions
+#@param expression:value.trim()
+#@in table119
+#@out table120
+#@end core/text-transform88
+#@begin core/column-split1#@desc Split column Dimensions by separator
+#@param col-name:Dimensions
+#@param separator:"x"
+#@param removeOriginalColumn:False
+#@in table120
+#@out table121
+#@end core/column-split1
+#@begin core/column-rename5#@desc Rename column Dimensions 1 to Length
+#@param oldColumnName:Dimensions_1
+#@param newColumnName:Length
+#@in table121
+#@out table122
+#@end core/column-rename5
+#@begin core/column-rename6#@desc Rename column Dimensions 2 to Width
+#@param oldColumnName:Dimensions_2
+#@param newColumnName:Width
+#@in table122
+#@out table123
+#@end core/column-rename6
+#@begin core/text-transform89#@desc Text transform on cells in column Length using expression value.toNumber()
+#@param col-name:Length
+#@param expression:value.toNumber()
+#@in table123
+#@out table124
+#@end core/text-transform89
+#@begin core/column-removal2#@desc Remove column Dimensions 3
+#@param col-name:Dimensions_3
+#@in table124
+#@out table125
+#@end core/column-removal2
+#@begin core/text-transform90#@desc Text transform on cells in column Length using expression value.toNumber()
+#@param col-name:Length
+#@param expression:value.toNumber()
+#@in table125
+#@out table126
+#@end core/text-transform90
+#@begin core/text-transform91#@desc Text transform on cells in column isCentimeters using expression value.replace(\"True\",\"1\")
+#@param col-name:isCentimeters
+#@param expression:value.replace("True","1")
+#@in table126
+#@out table127
+#@end core/text-transform91
+#@begin core/text-transform92#@desc Text transform on cells in column isCentimeters using expression value.toNumber()
+#@param col-name:isCentimeters
+#@param expression:value.toNumber()
+#@in table127
+#@out table128
+#@end core/text-transform92
+#@begin core/column-addition1#@desc Create column Area at index 13 based on column Width using expression grel:cells['Width'].value * cells['Length'].value
+#@param col-name:Width
+#@param newColumnName:"Area"
+#@in table128
+#@out table129
+#@end core/column-addition1
+#@begin core/text-transform93#@desc Text transform on cells in column Area using expression grel:value / 2.54 / 2.54
+#@param col-name:Area
+#@param expression:grel:value_/_2.54_/_2.54
+#@in table129
+#@out table130
+#@end core/text-transform93
+#@begin core/text-transform94#@desc Text transform on cells in column Area using expression value.toNumber()
+#@param col-name:Area
+#@param expression:value.toNumber()
+#@in table130
+#@out table131
+#@end core/text-transform94
+#@begin core/text-transform95#@desc Text transform on cells in column Area using expression grel:value.toString(\"%2.3f\")
+#@param col-name:Area
+#@param expression:grel:value.toString("%2.3f")
+#@in table131
+#@out table132
+#@end core/text-transform95
+#@begin core/text-transform96#@desc Text transform on cells in column Area using expression value.toNumber()
+#@param col-name:Area
+#@param expression:value.toNumber()
+#@in table132
+#@out table133
+#@end core/text-transform96
+#@begin core/text-transform97#@desc Text transform on cells in column location using expression value.trim()
+#@param col-name:location
+#@param expression:value.trim()
+#@in table133
+#@out table134
+#@end core/text-transform97
+#@begin core/mass-edit22#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table134
+#@out table135
+#@end core/mass-edit22
+#@begin core/mass-edit23#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table135
+#@out table136
+#@end core/mass-edit23
+#@begin core/mass-edit24#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table136
+#@out table137
+#@end core/mass-edit24
+#@begin core/mass-edit25#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table137
+#@out table138
+#@end core/mass-edit25
+#@begin core/mass-edit26#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table138
+#@out table139
+#@end core/mass-edit26
+#@begin core/mass-edit27#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table139
+#@out table140
+#@end core/mass-edit27
+#@begin core/mass-edit28#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table140
+#@out table141
+#@end core/mass-edit28
+#@begin core/mass-edit29#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table141
+#@out table142
+#@end core/mass-edit29
+#@begin core/mass-edit30#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table142
+#@out table143
+#@end core/mass-edit30
+#@begin core/row-removal0#@desc Remove rows
+#@param col-name:location
+#@param expression:"value"
+#@in table143
+#@out table144
+#@end core/row-removal0
+#@begin core/mass-edit31#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table144
+#@out table145
+#@end core/mass-edit31
+#@begin core/mass-edit32#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table145
+#@out table146
+#@end core/mass-edit32
+#@begin core/row-removal1#@desc Remove rows
+#@param col-name:location
+#@param expression:"value"
+#@in table146
+#@out table147
+#@end core/row-removal1
+#@begin core/text-transform98#@desc Text transform on cells in column location using expression grel:value.replace('\"', '')
+#@param col-name:location
+#@param expression:grel:value.replace('"',_'')
+#@in table147
+#@out table148
+#@end core/text-transform98
+#@begin core/text-transform99#@desc Text transform on cells in column location using expression grel:value.replace('\\\\', '')
+#@param col-name:location
+#@param expression:grel:value.replace('\\\\',_'')
+#@in table148
+#@out table149
+#@end core/text-transform99
+#@begin core/text-transform100#@desc Text transform on cells in column location using expression grel:value.replace('[', '').replace(']', '')
+#@param col-name:location
+#@param expression:grel:value.replace('[',_'').replace(']',_'')
+#@in table149
+#@out table150
+#@end core/text-transform100
+#@begin core/mass-edit33#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table150
+#@out table151
+#@end core/mass-edit33
+#@begin core/mass-edit34#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table151
+#@out table152
+#@end core/mass-edit34
+#@begin core/mass-edit35#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table152
+#@out table153
+#@end core/mass-edit35
+#@begin core/mass-edit36#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table153
+#@out table154
+#@end core/mass-edit36
+#@begin core/mass-edit37#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table154
+#@out table155
+#@end core/mass-edit37
+#@begin core/mass-edit38#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table155
+#@out table156
+#@end core/mass-edit38
+#@begin core/mass-edit39#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table156
+#@out table157
+#@end core/mass-edit39
+#@begin core/mass-edit40#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table157
+#@out table158
+#@end core/mass-edit40
+#@begin core/mass-edit41#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table158
+#@out table159
+#@end core/mass-edit41
+#@begin core/mass-edit42#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table159
+#@out table160
+#@end core/mass-edit42
+#@begin core/mass-edit43#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table160
+#@out table161
+#@end core/mass-edit43
+#@begin core/mass-edit44#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table161
+#@out table162
+#@end core/mass-edit44
+#@begin core/mass-edit45#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table162
+#@out table163
+#@end core/mass-edit45
+#@begin core/mass-edit46#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table163
+#@out table164
+#@end core/mass-edit46
+#@begin core/mass-edit47#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table164
+#@out table165
+#@end core/mass-edit47
+#@begin core/mass-edit48#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table165
+#@out table166
+#@end core/mass-edit48
+#@begin core/mass-edit49#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table166
+#@out table167
+#@end core/mass-edit49
+#@begin core/mass-edit50#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table167
+#@out table168
+#@end core/mass-edit50
+#@begin core/mass-edit51#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table168
+#@out table169
+#@end core/mass-edit51
+#@begin core/mass-edit52#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table169
+#@out table170
+#@end core/mass-edit52
+#@begin core/row-removal2#@desc Remove rows
+#@param col-name:location
+#@param expression:"value"
+#@in table170
+#@out table171
+#@end core/row-removal2
+#@begin core/row-removal3#@desc Remove rows
+#@param col-name:location
+#@param expression:"value"
+#@in table171
+#@out table172
+#@end core/row-removal3
+#@begin core/text-transform101#@desc Text transform on cells in column location using expression grel:value.replace('?', '')
+#@param col-name:location
+#@param expression:grel:value.replace('?',_'')
+#@in table172
+#@out table173
+#@end core/text-transform101
+#@begin core/text-transform102#@desc Text transform on cells in column location using expression value.trim()
+#@param col-name:location
+#@param expression:value.trim()
+#@in table173
+#@out table174
+#@end core/text-transform102
+#@begin core/mass-edit53#@desc Mass edit cells in column location
+#@param col-name:location
+#@in table174
+#@out table175
+#@end core/mass-edit53
+#@begin core/text-transform103#@desc Text transform on cells in column location using expression grel:value.replace('  ', ' ')
+#@param col-name:location
+#@param expression:grel:value.replace('__',_'_')
+#@in table175
+#@out table176
+#@end core/text-transform103
+#@begin core/text-transform104#@desc Text transform on cells in column location using expression value.replace(/[\\p{Zs}\\s]+/,' ')
+#@param col-name:location
+#@param expression:value.replace(/[\\p{Zs}\\s]+/,'_')
+#@in table176
+#@out table177
+#@end core/text-transform104
+#@begin core/row-removal4#@desc Remove rows
+#@param col-name:location
+#@param expression:"value"
+#@in table177
+#@out table178
+#@end core/row-removal4
+#@begin core/column-addition2#@desc Create column event_transform at index 4 based on column event using expression grel:value.replace(/[\\[\\];.,:!?\\(\\)\"']/, \"\")
+#@param col-name:event
+#@param newColumnName:"event_transform"
+#@in table178
+#@out table179
+#@end core/column-addition2
+#@begin core/text-transform105#@desc Text transform on cells in column event_transform using expression value.trim()
+#@param col-name:event_transform
+#@param expression:value.trim()
+#@in table179
+#@out table180
+#@end core/text-transform105
+#@begin core/text-transform106#@desc Text transform on cells in column event_transform using expression value.toUppercase()
+#@param col-name:event_transform
+#@param expression:value.toUppercase()
+#@in table180
+#@out table181
+#@end core/text-transform106
+#@begin core/column-addition3#@desc Create column event_cluster at index 5 based on column event_transform using expression grel:value
+#@param col-name:event_transform
+#@param newColumnName:"event_cluster"
+#@in table181
+#@out table182
+#@end core/column-addition3
+#@begin core/mass-edit54#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table182
+#@out table183
+#@end core/mass-edit54
+#@begin core/mass-edit55#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table183
+#@out table184
+#@end core/mass-edit55
+#@begin core/mass-edit56#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table184
+#@out table185
+#@end core/mass-edit56
+#@begin core/mass-edit57#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table185
+#@out table186
+#@end core/mass-edit57
+#@begin core/mass-edit58#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table186
+#@out table187
+#@end core/mass-edit58
+#@begin core/text-transform107#@desc Text transform on cells in column event_cluster using expression grel:\"LUNCH\"
+#@param col-name:event_cluster
+#@param expression:grel:"LUNCH"
+#@in table187
+#@out table188
+#@end core/text-transform107
+#@begin core/mass-edit59#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table188
+#@out table189
+#@end core/mass-edit59
+#@begin core/text-transform108#@desc Text transform on cells in column event_cluster using expression grel:\"DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"DINNER"
+#@in table189
+#@out table190
+#@end core/text-transform108
+#@begin core/text-transform109#@desc Text transform on cells in column event_cluster using expression grel:\"DAILY MENU\"
+#@param col-name:event_cluster
+#@param expression:grel:"DAILY_MENU"
+#@in table190
+#@out table191
+#@end core/text-transform109
+#@begin core/mass-edit60#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table191
+#@out table192
+#@end core/mass-edit60
+#@begin core/mass-edit61#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table192
+#@out table193
+#@end core/mass-edit61
+#@begin core/mass-edit62#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table193
+#@out table194
+#@end core/mass-edit62
+#@begin core/text-transform110#@desc Text transform on cells in column event_cluster using expression grel:\"BREAKFAST\"
+#@param col-name:event_cluster
+#@param expression:grel:"BREAKFAST"
+#@in table194
+#@out table195
+#@end core/text-transform110
+#@begin core/mass-edit63#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table195
+#@out table196
+#@end core/mass-edit63
+#@begin core/text-transform111#@desc Text transform on cells in column event_cluster using expression grel:\"DAILY MENU\"
+#@param col-name:event_cluster
+#@param expression:grel:"DAILY_MENU"
+#@in table196
+#@out table197
+#@end core/text-transform111
+#@begin core/mass-edit64#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table197
+#@out table198
+#@end core/mass-edit64
+#@begin core/text-transform112#@desc Text transform on cells in column event_cluster using expression grel:\"CHRISTMAS\"
+#@param col-name:event_cluster
+#@param expression:grel:"CHRISTMAS"
+#@in table198
+#@out table199
+#@end core/text-transform112
+#@begin core/text-transform113#@desc Text transform on cells in column event_cluster using expression grel:\"EASTER\"
+#@param col-name:event_cluster
+#@param expression:grel:"EASTER"
+#@in table199
+#@out table200
+#@end core/text-transform113
+#@begin core/mass-edit65#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table200
+#@out table201
+#@end core/mass-edit65
+#@begin core/text-transform114#@desc Text transform on cells in column event_cluster using expression grel:\"WASHINGTONS BIRTHDAY\"
+#@param col-name:event_cluster
+#@param expression:grel:"WASHINGTONS_BIRTHDAY"
+#@in table201
+#@out table202
+#@end core/text-transform114
+#@begin core/text-transform115#@desc Text transform on cells in column event_cluster using expression grel:\"LINCOLNS BIRTHDAY\"
+#@param col-name:event_cluster
+#@param expression:grel:"LINCOLNS_BIRTHDAY"
+#@in table202
+#@out table203
+#@end core/text-transform115
+#@begin core/text-transform116#@desc Text transform on cells in column event_cluster using expression grel:\"FOURTH OF JULY\"
+#@param col-name:event_cluster
+#@param expression:grel:"FOURTH_OF_JULY"
+#@in table203
+#@out table204
+#@end core/text-transform116
+#@begin core/text-transform117#@desc Text transform on cells in column event_cluster using expression grel:\"NEW YEARS\"
+#@param col-name:event_cluster
+#@param expression:grel:"NEW_YEARS"
+#@in table204
+#@out table205
+#@end core/text-transform117
+#@begin core/text-transform118#@desc Text transform on cells in column event_cluster using expression grel:\"US GRANTS BIRTHDAY\"
+#@param col-name:event_cluster
+#@param expression:grel:"US_GRANTS_BIRTHDAY"
+#@in table205
+#@out table206
+#@end core/text-transform118
+#@begin core/text-transform119#@desc Text transform on cells in column event_cluster using expression grel:\"WEDDING\"
+#@param col-name:event_cluster
+#@param expression:grel:"WEDDING"
+#@in table206
+#@out table207
+#@end core/text-transform119
+#@begin core/text-transform120#@desc Text transform on cells in column event_cluster using expression grel:\"HONORARY BANQUET\"
+#@param col-name:event_cluster
+#@param expression:grel:"HONORARY_BANQUET"
+#@in table207
+#@out table208
+#@end core/text-transform120
+#@begin core/text-transform121#@desc Text transform on cells in column event_cluster using expression grel:\"HONORARY LUNCH\"
+#@param col-name:event_cluster
+#@param expression:grel:"HONORARY_LUNCH"
+#@in table208
+#@out table209
+#@end core/text-transform121
+#@begin core/text-transform122#@desc Text transform on cells in column event_cluster using expression grel:\"HONORARY BREAKFAST\"
+#@param col-name:event_cluster
+#@param expression:grel:"HONORARY_BREAKFAST"
+#@in table209
+#@out table210
+#@end core/text-transform122
+#@begin core/text-transform123#@desc Text transform on cells in column event_cluster using expression grel:\"HONORARY DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"HONORARY_DINNER"
+#@in table210
+#@out table211
+#@end core/text-transform123
+#@begin core/text-transform124#@desc Text transform on cells in column event_cluster using expression grel:\"HONORARY BANQUET\"
+#@param col-name:event_cluster
+#@param expression:grel:"HONORARY_BANQUET"
+#@in table211
+#@out table212
+#@end core/text-transform124
+#@begin core/text-transform125#@desc Text transform on cells in column event_cluster using expression grel:\"HONORARY DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"HONORARY_DINNER"
+#@in table212
+#@out table213
+#@end core/text-transform125
+#@begin core/text-transform126#@desc Text transform on cells in column event_cluster using expression grel:\"HONORARY BANQUET\"
+#@param col-name:event_cluster
+#@param expression:grel:"HONORARY_BANQUET"
+#@in table213
+#@out table214
+#@end core/text-transform126
+#@begin core/text-transform127#@desc Text transform on cells in column event_cluster using expression grel:\"ANNUAL DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"ANNUAL_DINNER"
+#@in table214
+#@out table215
+#@end core/text-transform127
+#@begin core/text-transform128#@desc Text transform on cells in column event_cluster using expression grel:\"ANNUAL BANQUET\"
+#@param col-name:event_cluster
+#@param expression:grel:"ANNUAL_BANQUET"
+#@in table215
+#@out table216
+#@end core/text-transform128
+#@begin core/text-transform129#@desc Text transform on cells in column event_cluster using expression grel:\"ANNUAL DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"ANNUAL_DINNER"
+#@in table216
+#@out table217
+#@end core/text-transform129
+#@begin core/mass-edit66#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table217
+#@out table218
+#@end core/mass-edit66
+#@begin core/mass-edit67#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table218
+#@out table219
+#@end core/mass-edit67
+#@begin core/text-transform130#@desc Text transform on cells in column event_cluster using expression grel:\"ANNUAL LUNCH\"
+#@param col-name:event_cluster
+#@param expression:grel:"ANNUAL_LUNCH"
+#@in table219
+#@out table220
+#@end core/text-transform130
+#@begin core/text-transform131#@desc Text transform on cells in column event_cluster using expression grel:\"ANNUAL MEETING\"
+#@param col-name:event_cluster
+#@param expression:grel:"ANNUAL_MEETING"
+#@in table220
+#@out table221
+#@end core/text-transform131
+#@begin core/text-transform132#@desc Text transform on cells in column event_cluster using expression grel:\"ANNUAL BREAKFAST\"
+#@param col-name:event_cluster
+#@param expression:grel:"ANNUAL_BREAKFAST"
+#@in table221
+#@out table222
+#@end core/text-transform132
+#@begin core/text-transform133#@desc Text transform on cells in column event_cluster using expression grel:\"ANNUAL DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"ANNUAL_DINNER"
+#@in table222
+#@out table223
+#@end core/text-transform133
+#@begin core/mass-edit68#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table223
+#@out table224
+#@end core/mass-edit68
+#@begin core/text-transform134#@desc Text transform on cells in column event_cluster using expression grel:\"BANQUET/RECEPTION\"
+#@param col-name:event_cluster
+#@param expression:grel:"BANQUET/RECEPTION"
+#@in table224
+#@out table225
+#@end core/text-transform134
+#@begin core/mass-edit69#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table225
+#@out table226
+#@end core/mass-edit69
+#@begin core/mass-edit70#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table226
+#@out table227
+#@end core/mass-edit70
+#@begin core/text-transform135#@desc Text transform on cells in column event_cluster using expression grel:\"ANNUAL DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"ANNUAL_DINNER"
+#@in table227
+#@out table228
+#@end core/text-transform135
+#@begin core/mass-edit71#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table228
+#@out table229
+#@end core/mass-edit71
+#@begin core/text-transform136#@desc Text transform on cells in column event_cluster using expression grel:\"ANNIVERSARY DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"ANNIVERSARY_DINNER"
+#@in table229
+#@out table230
+#@end core/text-transform136
+#@begin core/text-transform137#@desc Text transform on cells in column event_cluster using expression grel:\"WEDDING ANNIVERSARY\"
+#@param col-name:event_cluster
+#@param expression:grel:"WEDDING_ANNIVERSARY"
+#@in table230
+#@out table231
+#@end core/text-transform137
+#@begin core/mass-edit72#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table231
+#@out table232
+#@end core/mass-edit72
+#@begin core/text-transform138#@desc Text transform on cells in column event_cluster using expression grel:\"ANNIVERSARY\"
+#@param col-name:event_cluster
+#@param expression:grel:"ANNIVERSARY"
+#@in table232
+#@out table233
+#@end core/text-transform138
+#@begin core/mass-edit73#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table233
+#@out table234
+#@end core/mass-edit73
+#@begin core/text-transform139#@desc Text transform on cells in column event_cluster using expression grel:\"TEA\"
+#@param col-name:event_cluster
+#@param expression:grel:"TEA"
+#@in table234
+#@out table235
+#@end core/text-transform139
+#@begin core/text-transform140#@desc Text transform on cells in column event_cluster using expression grel:\"WINE LIST\"
+#@param col-name:event_cluster
+#@param expression:grel:"WINE_LIST"
+#@in table235
+#@out table236
+#@end core/text-transform140
+#@begin core/text-transform141#@desc Text transform on cells in column event_cluster using expression grel:\"DRINKS\"
+#@param col-name:event_cluster
+#@param expression:grel:"DRINKS"
+#@in table236
+#@out table237
+#@end core/text-transform141
+#@begin core/text-transform142#@desc Text transform on cells in column event_cluster using expression grel:\"BALL\"
+#@param col-name:event_cluster
+#@param expression:grel:"BALL"
+#@in table237
+#@out table238
+#@end core/text-transform142
+#@begin core/text-transform143#@desc Text transform on cells in column event_cluster using expression grel:\"SUNDAY DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"SUNDAY_DINNER"
+#@in table238
+#@out table239
+#@end core/text-transform143
+#@begin core/text-transform144#@desc Text transform on cells in column event_cluster using expression grel:\"REUNION\"
+#@param col-name:event_cluster
+#@param expression:grel:"REUNION"
+#@in table239
+#@out table240
+#@end core/text-transform144
+#@begin core/text-transform145#@desc Text transform on cells in column event_cluster using expression grel:\"MEETING\"
+#@param col-name:event_cluster
+#@param expression:grel:"MEETING"
+#@in table240
+#@out table241
+#@end core/text-transform145
+#@begin core/text-transform146#@desc Text transform on cells in column event_cluster using expression grel:\"NEW YEARS\"
+#@param col-name:event_cluster
+#@param expression:grel:"NEW_YEARS"
+#@in table241
+#@out table242
+#@end core/text-transform146
+#@begin core/mass-edit74#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table242
+#@out table243
+#@end core/mass-edit74
+#@begin core/mass-edit75#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table243
+#@out table244
+#@end core/mass-edit75
+#@begin core/mass-edit76#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table244
+#@out table245
+#@end core/mass-edit76
+#@begin core/mass-edit77#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table245
+#@out table246
+#@end core/mass-edit77
+#@begin core/mass-edit78#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table246
+#@out table247
+#@end core/mass-edit78
+#@begin core/mass-edit79#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table247
+#@out table248
+#@end core/mass-edit79
+#@begin core/mass-edit80#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table248
+#@out table249
+#@end core/mass-edit80
+#@begin core/mass-edit81#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table249
+#@out table250
+#@end core/mass-edit81
+#@begin core/mass-edit82#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table250
+#@out table251
+#@end core/mass-edit82
+#@begin core/mass-edit83#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table251
+#@out table252
+#@end core/mass-edit83
+#@begin core/mass-edit84#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table252
+#@out table253
+#@end core/mass-edit84
+#@begin core/mass-edit85#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table253
+#@out table254
+#@end core/mass-edit85
+#@begin core/mass-edit86#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table254
+#@out table255
+#@end core/mass-edit86
+#@begin core/mass-edit87#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table255
+#@out table256
+#@end core/mass-edit87
+#@begin core/mass-edit88#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table256
+#@out table257
+#@end core/mass-edit88
+#@begin core/mass-edit89#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table257
+#@out table258
+#@end core/mass-edit89
+#@begin core/mass-edit90#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table258
+#@out table259
+#@end core/mass-edit90
+#@begin core/mass-edit91#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table259
+#@out table260
+#@end core/mass-edit91
+#@begin core/mass-edit92#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table260
+#@out table261
+#@end core/mass-edit92
+#@begin core/mass-edit93#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table261
+#@out table262
+#@end core/mass-edit93
+#@begin core/mass-edit94#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table262
+#@out table263
+#@end core/mass-edit94
+#@begin core/mass-edit95#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table263
+#@out table264
+#@end core/mass-edit95
+#@begin core/text-transform147#@desc Text transform on cells in column event_cluster using expression grel:\"TABLE DHOTE DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"TABLE_DHOTE_DINNER"
+#@in table264
+#@out table265
+#@end core/text-transform147
+#@begin core/text-transform148#@desc Text transform on cells in column event_cluster using expression grel:\"TABLE DHOTE\"
+#@param col-name:event_cluster
+#@param expression:grel:"TABLE_DHOTE"
+#@in table265
+#@out table266
+#@end core/text-transform148
+#@begin core/text-transform149#@desc Text transform on cells in column event_cluster using expression grel:\"CHAPTER DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"CHAPTER_DINNER"
+#@in table266
+#@out table267
+#@end core/text-transform149
+#@begin core/text-transform150#@desc Text transform on cells in column event_cluster using expression grel:\"TOUR DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"TOUR_DINNER"
+#@in table267
+#@out table268
+#@end core/text-transform150
+#@begin core/text-transform151#@desc Text transform on cells in column event_cluster using expression grel:\"TOUR LUNCH\"
+#@param col-name:event_cluster
+#@param expression:grel:"TOUR_LUNCH"
+#@in table268
+#@out table269
+#@end core/text-transform151
+#@begin core/text-transform152#@desc Text transform on cells in column event_cluster using expression grel:\"TOUR BREAKFAST\"
+#@param col-name:event_cluster
+#@param expression:grel:"TOUR_BREAKFAST"
+#@in table269
+#@out table270
+#@end core/text-transform152
+#@begin core/text-transform153#@desc Text transform on cells in column event_cluster using expression grel:\"LUNCH ON BOARD\"
+#@param col-name:event_cluster
+#@param expression:grel:"LUNCH_ON_BOARD"
+#@in table270
+#@out table271
+#@end core/text-transform153
+#@begin core/mass-edit96#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table271
+#@out table272
+#@end core/mass-edit96
+#@begin core/mass-edit97#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table272
+#@out table273
+#@end core/mass-edit97
+#@begin core/mass-edit98#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table273
+#@out table274
+#@end core/mass-edit98
+#@begin core/mass-edit99#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table274
+#@out table275
+#@end core/mass-edit99
+#@begin core/mass-edit100#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table275
+#@out table276
+#@end core/mass-edit100
+#@begin core/text-transform154#@desc Text transform on cells in column event_cluster using expression grel:\"REGULAR DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"REGULAR_DINNER"
+#@in table276
+#@out table277
+#@end core/text-transform154
+#@begin core/text-transform155#@desc Text transform on cells in column event_cluster using expression grel:\"FESTIVAL\"
+#@param col-name:event_cluster
+#@param expression:grel:"FESTIVAL"
+#@in table277
+#@out table278
+#@end core/text-transform155
+#@begin core/text-transform156#@desc Text transform on cells in column event_cluster using expression grel:\"SPECIALS\"
+#@param col-name:event_cluster
+#@param expression:grel:"SPECIALS"
+#@in table278
+#@out table279
+#@end core/text-transform156
+#@begin core/mass-edit101#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table279
+#@out table280
+#@end core/mass-edit101
+#@begin core/text-transform157#@desc Text transform on cells in column event_cluster using expression grel:\"ANNIVERSARY DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"ANNIVERSARY_DINNER"
+#@in table280
+#@out table281
+#@end core/text-transform157
+#@begin core/text-transform158#@desc Text transform on cells in column event_cluster using expression grel:\"ANNIVERSARY LUNCH\"
+#@param col-name:event_cluster
+#@param expression:grel:"ANNIVERSARY_LUNCH"
+#@in table281
+#@out table282
+#@end core/text-transform158
+#@begin core/text-transform159#@desc Text transform on cells in column event_cluster using expression grel:\"HONORARY DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"HONORARY_DINNER"
+#@in table282
+#@out table283
+#@end core/text-transform159
+#@begin core/text-transform160#@desc Text transform on cells in column event_cluster using expression grel:\"HONORARY DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"HONORARY_DINNER"
+#@in table283
+#@out table284
+#@end core/text-transform160
+#@begin core/text-transform161#@desc Text transform on cells in column event_cluster using expression grel:\"HONORARY DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"HONORARY_DINNER"
+#@in table284
+#@out table285
+#@end core/text-transform161
+#@begin core/text-transform162#@desc Text transform on cells in column event_cluster using expression grel:\"BANQUET/RECEPTION\"
+#@param col-name:event_cluster
+#@param expression:grel:"BANQUET/RECEPTION"
+#@in table285
+#@out table286
+#@end core/text-transform162
+#@begin core/text-transform163#@desc Text transform on cells in column event_cluster using expression grel:\"DAILY MENU\"
+#@param col-name:event_cluster
+#@param expression:grel:"DAILY_MENU"
+#@in table286
+#@out table287
+#@end core/text-transform163
+#@begin core/mass-edit102#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table287
+#@out table288
+#@end core/mass-edit102
+#@begin core/text-transform164#@desc Text transform on cells in column event_cluster using expression grel:\"DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"DINNER"
+#@in table288
+#@out table289
+#@end core/text-transform164
+#@begin core/mass-edit103#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table289
+#@out table290
+#@end core/mass-edit103
+#@begin core/text-transform165#@desc Text transform on cells in column event_cluster using expression grel:\"BREAKFAST & DINNER\"
+#@param col-name:event_cluster
+#@param expression:grel:"BREAKFAST_&_DINNER"
+#@in table290
+#@out table291
+#@end core/text-transform165
+#@begin core/mass-edit104#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table291
+#@out table292
+#@end core/mass-edit104
+#@begin core/mass-edit105#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table292
+#@out table293
+#@end core/mass-edit105
+#@begin core/mass-edit106#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table293
+#@out table294
+#@end core/mass-edit106
+#@begin core/mass-edit107#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table294
+#@out table295
+#@end core/mass-edit107
+#@begin core/mass-edit108#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table295
+#@out table296
+#@end core/mass-edit108
+#@begin core/mass-edit109#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table296
+#@out table297
+#@end core/mass-edit109
+#@begin core/mass-edit110#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table297
+#@out table298
+#@end core/mass-edit110
+#@begin core/text-transform166#@desc Text transform on cells in column event_cluster using expression grel:\"FALL FIELD DAY\"
+#@param col-name:event_cluster
+#@param expression:grel:"FALL_FIELD_DAY"
+#@in table298
+#@out table299
+#@end core/text-transform166
+#@begin core/text-transform167#@desc Text transform on cells in column event_cluster using expression grel:\"ANNUAL REGATTA\"
+#@param col-name:event_cluster
+#@param expression:grel:"ANNUAL_REGATTA"
+#@in table299
+#@out table300
+#@end core/text-transform167
+#@begin core/mass-edit111#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table300
+#@out table301
+#@end core/mass-edit111
+#@begin core/mass-edit112#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table301
+#@out table302
+#@end core/mass-edit112
+#@begin core/mass-edit113#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table302
+#@out table303
+#@end core/mass-edit113
+#@begin core/mass-edit114#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table303
+#@out table304
+#@end core/mass-edit114
+#@begin core/mass-edit115#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table304
+#@out table305
+#@end core/mass-edit115
+#@begin core/mass-edit116#@desc Mass edit cells in column event_cluster
+#@param col-name:event_cluster
+#@in table305
+#@out table306
+#@end core/mass-edit116
+#@end Linear_OR
