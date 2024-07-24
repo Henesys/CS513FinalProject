@@ -1,0 +1,73 @@
+digraph Workflow {
+rankdir=TB
+fontname=Courier; fontsize=18; labelloc=t
+label=CS512_Phase_II
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; color=white
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Courier]
+s1_profile_dataset_python [shape=record rankdir=LR label="{<f0> s1_profile_dataset_python |<f1> Python Dataset Profiling}"];
+s1_profile_dataset_openrefine [shape=record rankdir=LR label="{<f0> s1_profile_dataset_openrefine |<f1> OpenRefine Dataset Profiling}"];
+s1_combined_dq_issues [shape=record rankdir=LR label="{<f0> s1_combined_dq_issues |<f1> Combined DQ Issues}"];
+s2_resolve_missing_values [shape=record rankdir=LR label="{<f0> s2_resolve_missing_values |<f1> Remove or Impute Missing Values}"];
+s2_clean_physical_description [shape=record rankdir=LR label="{<f0> s2_clean_physical_description |<f1> Clean physical_descrption Column}"];
+s2_clean_location_data [shape=record rankdir=LR label="{<f0> s2_clean_location_data |<f1> Clean location_data Column}"];
+s2_standardize_event [shape=record rankdir=LR label="{<f0> s2_standardize_event |<f1> Standardize event Column}"];
+s2_merge [shape=record rankdir=LR label="{<f0> s2_merge |<f1> Merge Open Refine Cleaning Tasks}"];
+s2_clean_missing_values [shape=record rankdir=LR label="{<f0> s2_clean_missing_values |<f1> Remove or Impute Missing Values}"];
+s2_s2_combined_openrefine_cleaning [shape=record rankdir=LR label="{<f0> s2_s2_combined_openrefine_cleaning |<f1> Final Cleaning of Dataset}"];
+s3_data_quality_check [shape=record rankdir=LR label="{<f0> s3_data_quality_check |<f1> Data Quality Check}"];
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+cleaned_menu [shape=record rankdir=LR label="{<f0> cleaned_menu |<f1> file\:CleanedMenu.csv}"];
+open_refine_history [shape=record rankdir=LR label="{<f0> open_refine_history |<f1> file\:OpenRefineHistory.json}"];
+menu_csv [shape=record rankdir=LR label="{<f0> menu_csv |<f1> file\:menu.csv}"];
+s1_dq_issues_python
+s1_dq_issues_openrefine
+s1_dq_issues
+s2_openrefine_2 [shape=record rankdir=LR label="{<f0> s2_openrefine_2 |<f1> s2_openrefine_2.json}"];
+s2_openrefine_3 [shape=record rankdir=LR label="{<f0> s2_openrefine_3 |<f1> s2_openrefine_3.json}"];
+s2_openrefine_1 [shape=record rankdir=LR label="{<f0> s2_openrefine_1 |<f1> s2_openrefine_1.json}"];
+menu_s2_4 [shape=record rankdir=LR label="{<f0> menu_s2_4 |<f1> s2_Clean_Missing_Values.ipynb}"];
+s2_menu_csv [shape=record rankdir=LR label="{<f0> s2_menu_csv |<f1> file\:menu_data_1.csv}"];
+s2_combined_openrefine [shape=record rankdir=LR label="{<f0> s2_combined_openrefine |<f1> file\:combined_openrefine.json}"];
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+s1_profile_dataset_python -> s1_dq_issues_python
+menu_csv -> s1_profile_dataset_python
+s1_profile_dataset_openrefine -> s1_dq_issues_openrefine
+menu_csv -> s1_profile_dataset_openrefine
+s1_combined_dq_issues -> s1_dq_issues
+s1_dq_issues_python -> s1_combined_dq_issues
+s1_dq_issues_openrefine -> s1_combined_dq_issues
+s2_resolve_missing_values -> menu_s2_4
+menu_csv -> s2_resolve_missing_values
+s1_dq_issues_python -> s2_resolve_missing_values
+s2_clean_physical_description -> s2_openrefine_2
+menu_csv -> s2_clean_physical_description
+s1_dq_issues -> s2_clean_physical_description
+s2_clean_location_data -> s2_openrefine_3
+menu_csv -> s2_clean_location_data
+s1_dq_issues -> s2_clean_location_data
+s2_standardize_event -> s2_openrefine_1
+menu_csv -> s2_standardize_event
+s1_dq_issues -> s2_standardize_event
+s2_merge -> s2_combined_openrefine
+s2_openrefine_2 -> s2_merge
+s2_openrefine_3 -> s2_merge
+s2_openrefine_1 -> s2_merge
+s2_clean_missing_values -> s2_menu_csv
+menu_csv -> s2_clean_missing_values
+menu_s2_4 -> s2_clean_missing_values
+s2_s2_combined_openrefine_cleaning -> cleaned_menu
+s2_s2_combined_openrefine_cleaning -> open_refine_history
+s2_menu_csv -> s2_s2_combined_openrefine_cleaning
+s2_combined_openrefine -> s2_s2_combined_openrefine_cleaning
+cleaned_menu -> s3_data_quality_check
+}}
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+menu_csv_input_port [label=""]
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+cleaned_menu_output_port [label=""]
+open_refine_history_output_port [label=""]
+menu_csv_input_port -> menu_csv
+cleaned_menu -> cleaned_menu_output_port
+open_refine_history -> open_refine_history_output_port
+}
