@@ -15,15 +15,11 @@ s2_standardize_event [shape=record rankdir=LR label="{<f0> s2_standardize_event 
 s2_merge [shape=record rankdir=LR label="{<f0> s2_merge |<f1> Merge Open Refine Cleaning Tasks}"];
 s2_clean_missing_values [shape=record rankdir=LR label="{<f0> s2_clean_missing_values |<f1> Remove or Impute Missing Values}"];
 s2_s2_combined_openrefine_cleaning [shape=record rankdir=LR label="{<f0> s2_s2_combined_openrefine_cleaning |<f1> Final Cleaning of Dataset}"];
-inner_workflow_documentation [shape=record rankdir=LR label="{<f0> inner_workflow_documentation |<f1> Document Inner Workflow}"];
 s3_data_quality_check [shape=record rankdir=LR label="{<f0> s3_data_quality_check |<f1> Data Quality Check}"];
 node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
 cleaned_menu [shape=record rankdir=LR label="{<f0> cleaned_menu |<f1> file\:CleanedMenu.csv}"];
 open_refine_history [shape=record rankdir=LR label="{<f0> open_refine_history |<f1> file\:OpenRefineHistory.json}"];
 data_quality_reports
-yesworkflow_model [shape=record rankdir=LR label="{<f0> yesworkflow_model |<f1> file\:OpenFefineHistory.yw}"];
-graphvis_model [shape=record rankdir=LR label="{<f0> graphvis_model |<f1> file\:OpenFefineHistory.gv}"];
-svg_model [shape=record rankdir=LR label="{<f0> svg_model |<f1> file\:OpenRefineHistory.svg}"];
 menu_csv [shape=record rankdir=LR label="{<f0> menu_csv |<f1> file\:menu.csv}"];
 s1_dq_issues_python
 s1_dq_issues_openrefine
@@ -65,12 +61,7 @@ s2_s2_combined_openrefine_cleaning -> cleaned_menu
 s2_s2_combined_openrefine_cleaning -> open_refine_history
 s2_menu_csv -> s2_s2_combined_openrefine_cleaning
 s2_combined_openrefine -> s2_s2_combined_openrefine_cleaning
-inner_workflow_documentation -> yesworkflow_model
-inner_workflow_documentation -> graphvis_model
-inner_workflow_documentation -> svg_model
-open_refine_history -> inner_workflow_documentation
 s3_data_quality_check -> data_quality_reports
-menu_csv -> s3_data_quality_check
 cleaned_menu -> s3_data_quality_check
 }}
 node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
@@ -79,14 +70,8 @@ node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontn
 cleaned_menu_output_port [label=""]
 open_refine_history_output_port [label=""]
 data_quality_reports_output_port [label=""]
-yesworkflow_model_output_port [label=""]
-graphvis_model_output_port [label=""]
-svg_model_output_port [label=""]
 menu_csv_input_port -> menu_csv
 cleaned_menu -> cleaned_menu_output_port
 open_refine_history -> open_refine_history_output_port
 data_quality_reports -> data_quality_reports_output_port
-yesworkflow_model -> yesworkflow_model_output_port
-graphvis_model -> graphvis_model_output_port
-svg_model -> svg_model_output_port
 }

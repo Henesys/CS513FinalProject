@@ -3,9 +3,6 @@
 # @out cleaned_menu @as cleaned_menu @file file:CleanedMenu.csv
 # @out open_refine_history @as open_refine_history @file file:OpenRefineHistory.json
 # @out data_quality_reports @as data_quality_reports
-# @out yesworkflow_model @file file:OpenFefineHistory.yw
-# @out graphvis_model @file file:OpenFefineHistory.gv
-# @out svg_model @file file:OpenRefineHistory.svg
 
     # @begin s1_profile_dataset_python @desc Python Dataset Profiling
     # @in menu_csv @as menu_csv
@@ -69,15 +66,7 @@
     # @out open_refine_history @as open_refine_history @file file:OpenRefineHistory.json
     # @end s2_s2_combined_openrefine_cleaning
 
-    # @begin inner_workflow_documentation @desc Document Inner Workflow
-    # @in open_refine_history
-    # @out yesworkflow_model @file file:OpenFefineHistory.yw
-    # @out graphvis_model @file file:OpenFefineHistory.gv
-    # @out svg_model @file file:OpenRefineHistory.svg
-    # @end inner_workflow_documentation
-
     # @begin s3_data_quality_check @desc Data Quality Check
-    # @in menu_csv
     # @in cleaned_menu
     # @out data_quality_reports
     # @end s3_data_quality_check

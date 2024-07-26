@@ -7,3 +7,9 @@ dot -Tpdf .\menu_cleaning_outer_workflow-v2.gv -o menu_cleaning_outer_workflow-v
 dot -Tsvg .\menu_cleaning_outer_workflow-v2.gv -o menu_cleaning_outer_workflow-v2.svg
 
 dot -Tpng .\menu_cleaning_outer_workflow-v2.gv -o menu_cleaning_outer_workflow-v2.png
+
+
+Copy-Item -Path .\menu_cleaning_outer_workflow-v2.py -Destination ..\Submission\Workflow.yw
+Copy-Item -Path .\menu_cleaning_outer_workflow-v2.gv -Destination ..\Submission\Workflow.gv
+Copy-Item -Path .\menu_cleaning_outer_workflow-v2.svg -Destination ..\Submission\Workflow.svg
+Copy-Item -Path .\menu_cleaning_outer_workflow-v2.png -Destination ..\Submission\Workflow.png
